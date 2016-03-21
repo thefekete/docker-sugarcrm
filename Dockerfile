@@ -1,7 +1,7 @@
 FROM php:5.6-apache
 
 ENV MAJOR_VERSION 6.5
-ENV MINOR_VERSION 22
+ENV MINOR_VERSION 21
 ENV SOURCEFORGE_MIRROR http://downloads.sourceforge.net
 ENV WWW_FOLDER /var/www/html
 
