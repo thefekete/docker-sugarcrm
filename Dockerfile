@@ -20,6 +20,8 @@ RUN curl -L -O "${SOURCEFORGE_MIRROR}/project/sugarcrm/1%20-%20SugarCRM%20${MAJO
 	chown -R www-data:www-data ${WWW_FOLDER}/* && \
 	chown -R www-data:www-data ${WWW_FOLDER}
 
+# disable error when adding fields as seen in http://stackoverflow.com/a/20958542
+RUN echo "display_errors = Off" >> $PHP_INI_DIR/php.ini
 # change upload file size
 RUN echo "upload_max_filesize = 10M" >> $PHP_INI_DIR/php.ini
 
